@@ -1,0 +1,23 @@
+{
+  "name": "native-scroll",
+  "version": "1.1.0",
+  "description": "An alternative scrollbar for all browsers",
+  "main": "native-scroll.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theanhdev/native-scroll.git"
+  },
+  "keywords": [
+    "js",
+    "native",
+    "scroll",
+    "custom",
+    "cross browser",
+    "nativescroll"
+  ],
+  "author": "Nguyen The Anh",
+  "license": "MIT"
+}
