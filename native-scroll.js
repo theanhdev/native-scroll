@@ -11,7 +11,7 @@
     sheet.insertRule('.__vertical.__active,.__horizontal.__active{opacity: .6;}', 5);
     function registerScroll(target) {
         var observer = new MutationObserver(() => {
-            if (!document.body.contains(target)) observer.disconnect();
+            if (target.tagName !== 'HTML' && !document.body.contains(target)) observer.disconnect();
             else updateScroll();
         });
         var container;
