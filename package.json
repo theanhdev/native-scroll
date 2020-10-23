@@ -1,28 +1,30 @@
 {
   "name": "native-scroll",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "An alternative scrollbar for all browsers",
-  "main": "dist/native-scroll.min.js",
+  "main": "native-scroll.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
-    "prepublishOnly": "npm run build"
+    "precommit": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/theanhdev/native-scroll.git"
   },
   "keywords": [
-    "js",
-    "native",
     "scroll",
-    "custom",
-    "cross browser",
-    "nativescroll"
+    "jsscroll",
+    "js scroll",
+    "nativescroll",
+    "native scroll",
+    "scroll custom",
+    "cross browser"
   ],
   "author": "Nguyen The Anh",
   "license": "MIT",
   "devDependencies": {
+    "husky": "^0.13.4",
     "webpack": "^5.2.0",
     "webpack-cli": "^4.1.0"
   }
