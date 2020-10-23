@@ -2,6 +2,7 @@
 An alternative scrollbar for all browsers
   - Easy to intergate
   - Customizable with css
+  - Can apply for all browser
 
 # How to use
 just import to your project
