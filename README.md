@@ -17,6 +17,12 @@ or use <scrip> tag
 ```
 and custom with css
 ```css
+.__vertical {
+  width: 12px;
+}
+.__horizontal {
+  height: 12px;
+}
 .__vertical, .__horizontal {
   background: #444;
 }
