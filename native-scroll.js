@@ -37,10 +37,10 @@
             scroll = function () {
                 observer.disconnect();
                 if (verticalBar) {
-                    verticalBar.style.transform = `translate(${target.tagName === 'HTML' ? target.clientWidth - target.scrollWidth + target.scrollLeft : 0}px,${(target.scrollTop * (target.clientHeight - verticalBar.clientHeight)) / (target.scrollHeight - target.clientHeight) + target.scrollTop}px)`
+                    verticalBar.style.transform = `translate(${target.tagName === 'HTML' ? target.clientWidth - target.scrollWidth + target.scrollLeft : target.scrollLeft}px,${(target.scrollTop * (target.clientHeight - verticalBar.clientHeight)) / (target.scrollHeight - target.clientHeight) + target.scrollTop}px)`
                 }
                 if (horizontalBar) {
-                    horizontalBar.style.transform = `translate(${(target.scrollLeft * (target.clientWidth - horizontalBar.clientWidth)) / (target.scrollWidth - target.clientWidth) + target.scrollLeft}px,${target.tagName === 'HTML' ? target.clientHeight - target.scrollHeight + target.scrollTop : 0}px)`
+                    horizontalBar.style.transform = `translate(${(target.scrollLeft * (target.clientWidth - horizontalBar.clientWidth)) / (target.scrollWidth - target.clientWidth) + target.scrollLeft}px,${target.tagName === 'HTML' ? target.clientHeight - target.scrollHeight + target.scrollTop : target.scrollTop}px)`
                 }
                 observer.observe(target, { attributes: true, childList: true, subtree: true });
             },
