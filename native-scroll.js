@@ -31,6 +31,7 @@
                 }, 1000);
             },
             mouseMove = function () {
+                updateScroll();
                 activeFn();
                 deActiveFn();
             },

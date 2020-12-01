@@ -1,6 +1,6 @@
 {
   "name": "native-scroll",
-  "version": "1.1.5",
+  "version": "1.2.1",
   "description": "An alternative scrollbar for all browsers",
   "main": "native-scroll.js",
   "scripts": {
