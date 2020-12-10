@@ -198,18 +198,19 @@
         target.addEventListener('wheel', function (e) {
             if (e.ctrlKey || e.altKey) return;
             var old;
+            const step = 100 / (window.devicePixelRatio || 1)
             if (e.shiftKey) {
                 old = target.scrollLeft;
-                if (e.deltaY > 0) target.scrollLeft += 100;
-                else target.scrollLeft -= 100;
+                if (e.deltaY > 0) target.scrollLeft += step;
+                else target.scrollLeft -= step;
                 if (old !== target.scrollLeft) {
                     mouseMove();
                     e.stopPropagation();
                 }
             } else {
                 old = target.scrollTop;
-                if (e.deltaY > 0) target.scrollTop += 100;
-                else target.scrollTop -= 100;
+                if (e.deltaY > 0) target.scrollTop += step;
+                else target.scrollTop -= step;
                 if (old !== target.scrollTop) {
                     mouseMove();
                     e.stopPropagation();
