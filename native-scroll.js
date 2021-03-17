@@ -177,10 +177,10 @@
                         }
                     }
                     if (horizontalBar) {
-                        var max = Math.max(32, target.clientWidth / 2);
+                        var min = Math.min(32, target.clientWidth / 2);
                         var size =
                             target.clientWidth / (target.scrollWidth / target.clientWidth);
-                        horizontalBar.style.width = (size < max ? max : size) + 'px';
+                        horizontalBar.style.width = (size < min ? min : size) + 'px';
                         scroll();
                     }
                 }
@@ -199,9 +199,9 @@
             if (e.ctrlKey || e.altKey) return;
             var old;
             const step = 100 / (window.devicePixelRatio || 1)
-            if (e.shiftKey) {
+            if (e.shiftKey || e.deltaX) {
                 old = target.scrollLeft;
-                if (e.deltaY > 0) target.scrollLeft += step;
+                if ((e.deltaX || e.deltaY) > 0) target.scrollLeft += step;
                 else target.scrollLeft -= step;
                 if (old !== target.scrollLeft) {
                     mouseMove();
